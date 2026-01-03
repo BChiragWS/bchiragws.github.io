@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6be743ed.css",
+    "main.js": "/static/js/main.d12479c7.js",
+    "static/js/453.b05d8aa5.chunk.js": "/static/js/453.b05d8aa5.chunk.js",
+    "static/media/kuka.png": "/static/media/kuka.7f203ce75567d7d73098.png",
+    "static/media/arm.png": "/static/media/arm.dcee942d4f18f0286941.png",
+    "static/media/profile.png": "/static/media/profile.461ed7d3703331c5b5a3.png",
+    "static/media/mock.jpg": "/static/media/mock.611d72a57cf47917b373.jpg",
+    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/maglev_system_illustration.jpg": "/static/media/maglev_system_illustration.43a74a9ac42c3b03d800.jpg",
+    "index.html": "/index.html",
+    "main.6be743ed.css.map": "/static/css/main.6be743ed.css.map",
+    "main.d12479c7.js.map": "/static/js/main.d12479c7.js.map",
+    "453.b05d8aa5.chunk.js.map": "/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6be743ed.css",
+    "static/js/main.d12479c7.js"
+  ]
+}
