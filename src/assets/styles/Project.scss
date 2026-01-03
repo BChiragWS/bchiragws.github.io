@@ -1,49 +1,78 @@
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 10%;
-    text-align: left;
-}
-  
-.projects-container .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
-}
-  
-.projects-container .projects-grid .project {
-    text-align: left;
-}
-  
-.project h2:hover {
-    text-decoration: underline;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}
-  
-.zoom {
-    border-radius: 5px;
-    transition: transform .2s;
-    margin: 0 auto;
-}
-  
-.zoom:hover {
-    transform: scale(1.05);
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  text-align: left;
 }
 
-@media screen {
-    @media (max-width: 700px) {
-        .projects-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-  
-        .projects-container .projects-grid {
-            display: block;
-        }
-      
-        .projects-container .projects-grid .project {
-            padding-bottom: 5%;
-        }
-    }
+/* Grid layout */
+.projects-container .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.projects-container .projects-grid .project {
+  text-align: left;
+}
+
+/* Project title hover */
+.project h2:hover {
+  text-decoration: underline;
+  transition: color 0.15s ease-in-out;
+}
+
+/* ============================= */
+/* IMAGE HANDLING (IMPORTANT) */
+/* ============================= */
+
+.project-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* change to 'contain' if you want no cropping */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Zoom effect */
+.project-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Two-image layout (Maglev) */
+.project-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ============================= */
+/* RESPONSIVE (MOBILE) */
+/* ============================= */
+
+@media (max-width: 700px) {
+  .projects-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .projects-container .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-image-wrapper {
+    height: 200px;
+  }
 }

@@ -1,91 +1,107 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faMicrochip, faRobot, faCogs } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+  "C / C++",
+  "Python",
+  "MATLAB / Simulink",
+  "ROS (Noetic)",
+  "Gazebo",
+  "RViz",
+  "URDF / Xacro"
 ];
 
 const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+  "STM32",
+  "Nucleo",
+  "Raspberry Pi",
+  "PlatformIO",
+  "STM32CubeIDE",
+  "CAN",
+  "SPI",
+  "I2C",
+  "UART",
+  "PWM"
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+  "PID Control",
+  "Control System Design",
+  "Sensor Integration",
+  "Real-Time Systems",
+  "CAD (SolidWorks)",
+  "Onshape",
+  "PCB Design",
+  "Schematic Design"
 ];
 
 function Expertise() {
-    return (
-    <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+  return (
+    <div className="container" id="skills">
+      <div className="skills-container">
+        <h1>Skills & Expertise</h1>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+        <div className="skills-grid">
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+          {/* Robotics & Software */}
+          <div className="skill">
+            <FontAwesomeIcon icon={faRobot} size="3x" />
+            <h3>Robotics & Software Systems</h3>
+            <p>
+              Experience in developing robotic systems using ROS with integrated
+              simulation and hardware workflows. Worked on digital twins, autonomous
+              systems, and real-time robot control using C++, Python, and MATLAB.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Technologies:</span>
+              {labelsFirst.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
             </div>
+          </div>
+
+          {/* Embedded Systems */}
+          <div className="skill">
+            <FontAwesomeIcon icon={faMicrochip} size="3x" />
+            <h3>Embedded Systems & Hardware</h3>
+            <p>
+              Hands-on experience with embedded platforms including STM32 and Raspberry
+              Pi. Developed real-time firmware, integrated sensors and actuators, and
+              worked with low-level communication protocols.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Technologies:</span>
+              {labelsSecond.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          {/* Control & Design */}
+          <div className="skill">
+            <FontAwesomeIcon icon={faCogs} size="3x" />
+            <h3>Control Systems & Mechanical Design</h3>
+            <p>
+              Designed and tuned control algorithms for electromechanical systems,
+              including PID-based controllers and sensor feedback loops. Experienced in
+              CAD-based mechanical design and hardware–software co-design.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Technologies:</span>
+              {labelsThird.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Expertise;

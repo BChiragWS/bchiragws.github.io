@@ -1,67 +1,103 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import '../assets/styles/Timeline.scss'
+import '../assets/styles/Timeline.scss';
 
 function Timeline() {
   return (
-    <div id="history">
+    <div id="experience">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Experience</h1>
+
         <VerticalTimeline>
+
+          {/* University of Stuttgart – Student Research Assistant */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
-            contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Aug 2025 – Dec 2025"
+            iconStyle={{ background: '#5000ca', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">
+              Student Research Assistant
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              University of Stuttgart · Stuttgart, Germany
+            </h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Worked on real-time magnetic control systems using C++ with TLE493D sensors
+              and H-bridge drivers. Designed parametric CAD fixtures, analyzed system
+              response data, and improved control linearity through software compensation
+              and PID tuning.
             </p>
           </VerticalTimelineElement>
+
+          {/* Fraunhofer IPA */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Jul 2023 – Sep 2025"
+            iconStyle={{ background: '#5000ca', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">
+              Scientific Research Assistant
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Fraunhofer IPA · Stuttgart, Germany
+            </h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Analyzed energy consumption of KUKA robotic cells and identified usage
+              patterns to improve performance. Deployed machine learning models for
+              robotic arm energy prediction and conducted fuel cell simulations using
+              MATLAB/Simulink. Worked with ROS for robot control and real-time
+              communication.
             </p>
           </VerticalTimelineElement>
+
+          {/* University of Stuttgart – Autonomous Driving */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Nov 2024 – Apr 2025"
+            iconStyle={{ background: '#5000ca', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">
+              Student Research Assistant
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              University of Stuttgart · Stuttgart, Germany
+            </h4>
             <p>
-              Full-stack Development, API Development, User Experience
+              Developed and tested autonomous driving agents in the CARLA simulator.
+              Fine-tuned perception and planning modules and validated agent behavior
+              using Scenario Runner under diverse traffic and weather conditions.
             </p>
           </VerticalTimelineElement>
+
+          {/* ZF */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Sep 2023 – Sep 2024"
+            iconStyle={{ background: '#5000ca', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">
+              Working Student – Algorithm Development
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              ZF Friedrichshafen AG · Alfdorf, Germany
+            </h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+              Performed ECU testing and CAN bus simulations using Vector CANoe.
+              Conducted validation for heating, peripherals, and regenerative braking
+              systems. Supported CI/CD pipelines using Jenkins for automated builds,
+              testing, and deployment.
             </p>
           </VerticalTimelineElement>
+
         </VerticalTimeline>
       </div>
     </div>
