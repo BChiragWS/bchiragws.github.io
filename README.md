@@ -45,4 +45,6 @@ To run the project locally:
 ```bash
 npm install
 npm start
-> **Note:** This portfolio is built using an open-source React template, customized extensively to present my own work and experience.
+
+---
+**Note:** This portfolio is built using an open-source React template, customized extensively to present my own work and experience.
